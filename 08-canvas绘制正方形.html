@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 300;
+        canvas.style.border = '1px solid #ccc';
+        var context = canvas.getContext('2d');
+        // 起始点
+        context.moveTo(100,100);
+        // 第一个结束点
+        context.lineTo(200,100);
+        // 第二个结束点
+        context.lineTo(200,200);
+        // 第三个结束点
+        context.lineTo(100,200);
+        // 第四个结束点
+        context.lineTo(100,100);
+        
+        // context.stroke();
+        context.fill();  //使用context.fill() 可以在正方形中填充颜色
+        
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id=""></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 400;
+        canvas.style.border = '1px solid #ccc';
+
+        var context = canvas.getContext('2d');
+        // 第一种方法
+        // context.rect(100,100,200,100);
+        // context.stroke();
+        // 第二种方法
+        // context.strokeRect(100,100,200,100);
+        context.fillRect(100,100,300,100);
+        // 第三种
+        context.clearRect(110,110,280,80);
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

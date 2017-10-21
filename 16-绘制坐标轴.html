@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 准备一张纸（画布） -->
+    <canvas id=""></canvas>
+    <script>
+        // 2.获取纸（画布）
+        var canvas = document.querySelector('canvas');
+        canvas.width = 800;
+        canvas.height = 500;
+        canvas.style.border = '1px solid #eee';
+        // 准备画笔
+        var context = canvas.getContext('2d');
+        // 确定和画布的边距 (给坐标轴留一定的空间)
+        var space = 20;
+        // 确定小箭头的大小
+        var aWidth = 10;
+        // 确定 0,0点的坐标
+        var zeroX = space;
+        var zeroY = canvas.height - space;
+        // 画X轴
+        context.moveTo(zeroX,zeroY);
+        // 以画布的宽度-与画布间隔的长度 得出X轴的X坐标，
+        context.lineTo(canvas.width-space,zeroY);
+        // 计算小箭头的坐标
+        context.lineTo(canvas.width - space-aWidth,canvas.height-space+aWidth/2);
+        context.lineTo(canvas.width-space-aWidth,canvas.height-space-aWidth/2);
+        context.lineTo(canvas.width-space,zeroY);
+
+        context.fill();
+        context.stroke();
+
+        // 画Y轴
+        context.moveTo(zeroX,zeroY);
+        context.lineTo(zeroX,space);
+        context.lineTo(space+aWidth/2,space+aWidth);
+        context.lineTo(space-aWidth/2,space+aWidth);
+        context.lineTo(zeroX,space);
+        context.fill();
+        context.stroke();
+
+        // PS: 画布的X轴Y轴为坐标的原点  但是画坐标轴时不是 
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

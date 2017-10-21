@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas绘制线段设置样式</title>
+</head>
+<body>
+    <canvas id=""></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 300;
+        canvas.style.border = '1px solid #ccc';
+        
+        var context = canvas.getContext('2d');
+        // 设置线的颜色
+        context.strokeStyle = 'red';
+        // 线末端 以默认样式结束
+        context.lineCap = 'butt';
+        // 改变线末端样式 context.lineCap = 'round';
+        // context.lineCap = 'round';
+        // 线末端以 小方块的形式结束
+        // context.lineCap = 'square';
+
+
+        // 计划起始点
+        context.moveTo(20,100);
+        // 设置线的宽度
+        context.lineWidth = 20;
+
+        // 计划终点
+        context.lineTo(200,100);
+
+        // 链接点
+        context.stroke();
+        
+
+
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

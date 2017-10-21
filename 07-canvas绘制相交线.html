@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id=""></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 800;
+        canvas.height = 400;
+        canvas.style.border = '1px solid #ccc';
+        var context = canvas.getContext('2d');
+        // 中间的横线
+        context.beginPath();
+        context.moveTo(360,200);
+        context.lineTo(440,200);
+        context.stroke();
+        // 竖线
+        context.beginPath();
+        context.moveTo(400,100);
+        context.lineTo(400,300);
+        context.stroke();
+        // 上面的横线
+        context.beginPath();
+        context.moveTo(390,100);
+        context.lineTo(410,100);
+        context.stroke();
+        // 下面的横线
+        context.beginPath();
+        context.moveTo(390,300);
+        context.lineTo(410,300);
+        context.stroke();
+        // 左上的斜线
+        context.beginPath();
+        context.moveTo(390,100);
+        context.lineTo(360,200);
+        context.stroke();
+        // 左下的斜线
+        context.beginPath();
+        context.moveTo(360,200);
+        context.lineTo(390,300);
+        context.stroke();
+        // 右上的斜线
+        context.beginPath();
+        context.moveTo(410,100);
+        context.lineTo(440,200);
+        context.stroke();
+        // 右下的斜线
+        context.beginPath();
+        context.moveTo(440,200);
+        context.lineTo(410,300);
+        context.stroke();
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

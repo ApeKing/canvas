@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 准备一张纸（添加canvas标签） -->
+    <canvas id=""></canvas>
+
+    <script>
+        // 获取纸
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvasoheight = 300;
+        canvas.style.border = '1px solid #ccc';
+
+        // 准备画笔  2d 
+        var context = canvas.getContext('2d');
+
+        // 计划起点
+        // context.moveTo(X,Y);  让画笔移动到哪个坐标开始准备画
+        context.moveTo(10,10);
+        // 计划直线的终点
+        // context.lineTo(X,Y);  让画笔最终停止的点（坐标）
+        context.lineTo(20,20);
+
+        // 开始上画笔  （描图）
+        context.stroke();  // 描边 -- 吧起始点和终止点连接起来
+
+    </script>
+
+
+
+</body>
+</html>

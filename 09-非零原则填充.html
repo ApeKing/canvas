@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id=""></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 300;
+        var context = canvas.getContext('2d');
+        context.moveTo(100,50);
+        context.lineTo(500,50);
+        context.lineTo(500,250);
+        context.lineTo(100,250);
+        context.lineTo(100,50);
+
+        // 这是非零
+        // context.moveTo(200,100);
+        // context.lineTo(300,100);
+        // context.lineTo(300,200);
+        // context.lineTo(200,200);
+        // context.lineTo(200,100);
+
+        // 这是零
+        context.moveTo(200,100);
+        context.lineTo(200,200);
+        context.lineTo(300,200);
+        context.lineTo(300,100);
+        context.lineTo(200,100);
+
+        context.fillStyle= '#ddd';
+        // context.stroke();
+        
+        context.fill();
+        /* 问题： 通过fill 来获取镂空正方形框，通过代码可知
+         所有线都是通过顺时针链接的，所以没有得到镂空的图形
+        原因：因为非零环绕原则
+        注意事项： 非零环绕原则只适用于一笔画成的图形 */
+        
+
+
+    </script>
+
+
+
+
+</body>
+</html>

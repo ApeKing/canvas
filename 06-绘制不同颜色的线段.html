@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id=""></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 300;
+        canvas.style.border = '1px solid #ccc';
+        var context = canvas.getContext('2d');
+
+        // 绘制第一条线段
+        context.beginPath();// 如果只写 stroke  颜色将不是原本的颜色  
+        // 解决方式就是为他们设置线宽 要大于2  但是只显示最后一种颜色
+        context.strokeStyle = 'red';
+        // context.lineStyle = 2;
+        context.moveTo(100,50);
+        context.lineTo(200,50);
+        context.stroke();
+
+        // 绘制第二条线段
+        context.beginPath();  //如果只写beginPath() 且只在最后输出内容  那么将会只出现最后一条线
+        context.strokeStyle = 'blue';
+        // context.lineWidth = 2;
+        context.moveTo(100,90);
+        context.lineTo(200,90);
+        context.stroke();
+
+        // 绘制第三条线段
+        context.beginPath();  
+        context.strokeStyle = "yellow";
+        // context.lineWidth = 2;
+        context.moveTo(100,130);
+        context.lineTo(200,130);
+        context.stroke(); 
+
+        // 正常绘制多天线段时  需要加 context.beginPath  和  context.stroke()
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
